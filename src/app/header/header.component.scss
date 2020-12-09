@@ -1,0 +1,135 @@
+/* HEADER SECTION */
+.home__header {
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 5px;
+  width: 100%;
+
+  &__left {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    gap: 10px;
+    flex: 0.5;
+    height: 100%;
+
+    div.input {
+      position: relative;
+      width: fit-content;
+
+      input {
+        outline: none;
+        border: 1px solid lightgray;
+        background-color: #f0f2f5;
+        padding: 10px 40px;
+        border-radius: 20px;
+
+        &::placeholder {
+          padding-left: 20px;
+          font-size: 15px;
+        }
+      }
+
+      .search-icon {
+        position: absolute;
+        top: 6px;
+        font-size: x-large;
+        left: 10px;
+        color: #828890;
+      }
+    }
+  }
+
+  // Left Ends Here
+
+  &__middle {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.5;
+
+    div {
+      height: 100%;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      padding: 18px 15px;
+      justify-content: center;
+
+      mat-icon {
+        color: #65676b;
+        font-size: 30px;
+      }
+    }
+
+    div:hover {
+      background-color: #f2f2f2;
+      cursor: pointer;
+      border-radius: 15px;
+    }
+
+    div.active {
+      position: relative;
+
+      &::before {
+        content: "";
+        border-bottom: 4px solid #1877f2;
+        position: absolute;
+        bottom: -15px;
+        height: 2px;
+        width: 100%;
+      }
+
+      mat-icon {
+        color: #1877f2;
+      }
+    }
+  }
+
+  // Middle Ends Here
+
+  &__right {
+    flex: 0.5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    gap: 10px;
+
+    > * {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    span.name {
+      font-size: 16px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 5px;
+      }
+    }
+
+    div:not(:first-of-type) {
+      padding: 10px;
+      border-radius: 50%;
+      background-color: #e4e6eb;
+    }
+
+    .user-avatar {
+      width: 50px;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+}

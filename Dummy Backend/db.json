@@ -1,0 +1,131 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Ahmed",
+      "lastName": "Abbas",
+      "about": "I'm a front-end web developer at information technology institute.",
+      "avatar": "https://picsum.photos/100/100",
+      "email": "abc@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Michel",
+      "lastName": "Schot",
+      "about": "I'm the regional manager of dunder mefflin.",
+      "avatar": "https://picsum.photos/100/100",
+      "email": "xyz@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Dwight",
+      "lastName": "Shrowt",
+      "about": "I'm the assistant of regional manager of dunder mefflin.",
+      "avatar": "https://picsum.photos/100/100",
+      "email": "cpy@gmail.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "There's goting to be a musical about meghan",
+      "message": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium illum in enim excepturi, cumque quo. Excepturi eveniet fugiat unde nobis, sit quod fuga id explicabo sint, doloremque officiis, autem temporibus.",
+      "avatar": "https://picsum.photos/100/107",
+      "tags": [],
+      "date": "1/5/2020",
+      "author": "2",
+      "category": "Travel"
+    },
+    {
+      "id": 2,
+      "title": "There's goting to be a musical about meghan",
+      "message": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium illum in enim excepturi, cumque quo. Excepturi eveniet fugiat unde nobis, sit quod fuga id explicabo sint, doloremque officiis, autem temporibus.",
+      "avatar": "https://picsum.photos/100/108",
+      "tags": [],
+      "date": "3/5/2020",
+      "author": "1",
+      "category": "Travel"
+    },
+    {
+      "id": 3,
+      "title": "There's goting to be a musical about meghan",
+      "message": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium illum in enim excepturi, cumque quo. Excepturi eveniet fugiat unde nobis, sit quod fuga id explicabo sint, doloremque officiis, autem temporibus.",
+      "avatar": "https://picsum.photos/100/109",
+      "tags": [],
+      "date": "31/4/2020",
+      "author": "2",
+      "category": "Travel"
+    },
+    {
+      "id": 4,
+      "title": "There's goting to be a musical about meghan",
+      "message": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium illum in enim excepturi, cumque quo. Excepturi eveniet fugiat unde nobis, sit quod fuga id explicabo sint, doloremque officiis, autem temporibus.",
+      "avatar": "https://picsum.photos/100/106",
+      "tags": [],
+      "date": "2/5/2020",
+      "author": "1",
+      "category": "Travel"
+    },
+    {
+      "message": "dgdtjeryt",
+      "title": "Ahmed Abbas",
+      "avatar": "https://picsum.photos/100/100",
+      "date": "12/1/2020",
+      "id": 5
+    }
+  ],
+  "stories": [
+    {
+      "image": "https://picsum.photos/200/300",
+      "avatar": "https://picsum.photos/100/101"
+    },
+    {
+      "image": "https://picsum.photos/300/400",
+      "avatar": "https://picsum.photos/100/102"
+    },
+    {
+      "image": "https://picsum.photos/500/600",
+      "avatar": "https://picsum.photos/100/103"
+    },
+    {
+      "image": "https://picsum.photos/600/800",
+      "avatar": "https://picsum.photos/100/104"
+    },
+    {
+      "image": "https://picsum.photos/400/500",
+      "avatar": "https://picsum.photos/100/105"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "title": "Travel",
+      "image": "/imgs/3.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Travel",
+      "image": "/imgs/1.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Travel",
+      "image": "/imgs/2.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Travel",
+      "image": "/imgs/4.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Travel",
+      "image": "/imgs/5.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Travel",
+      "image": "/imgs/6.jpg"
+    }
+  ]
+}

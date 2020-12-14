@@ -13,10 +13,14 @@
     </div>
   </div>
   <div class="home__header__middle">
-    <div class="active">
+    <div
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       <mat-icon>home</mat-icon>
     </div>
-    <div>
+    <div routerLink="/stories" routerLinkActive="active">
       <mat-icon>ondemand_video</mat-icon>
     </div>
     <div>
@@ -34,6 +38,7 @@
       <img class="user-avatar" alt="" mat-card-avatar [src]="user?.avatar" />
       <span class="name">{{ user?.firstName || "Indranil" }}</span>
     </div>
+
     <div>
       <mat-icon>add</mat-icon>
     </div>

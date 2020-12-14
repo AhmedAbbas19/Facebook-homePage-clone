@@ -1,13 +1,19 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { MatCardModule } from "@angular/material/card";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatMenuModule } from "@angular/material/menu";
-
 import { MatIconModule } from "@angular/material/icon";
-import { SpinnerComponent } from './spinner/spinner.component';
+import { StoryDialogComponent } from "./story-dialog/story-dialog.component";
+import { MatListModule } from "@angular/material/list";
+import { MatGridListModule } from "@angular/material/grid-list";
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+} from "@angular/material";
+import { SpinnerComponent } from "./spinner/spinner.component";
 
 const modules = [
   MatCardModule,
@@ -16,10 +22,17 @@ const modules = [
   MatDialogModule,
   MatMenuModule,
   MatIconModule,
+  MatFormFieldModule,
+  MatButtonModule,
+  MatInputModule,
+  MatListModule,
+  MatGridListModule,
 ];
 
 @NgModule({
-  imports: [CommonModule, ...modules],
-  exports: [...modules],
+  declarations: [StoryDialogComponent, SpinnerComponent],
+  imports: [...modules],
+  entryComponents: [StoryDialogComponent],
+  exports: [...modules, StoryDialogComponent, SpinnerComponent],
 })
 export class MaterialModule {}

@@ -1,0 +1,10 @@
+.stories {
+  display: flex;
+
+  &__list {
+    width: 20%;
+  }
+  &__item {
+    width: 80%;
+  }
+}

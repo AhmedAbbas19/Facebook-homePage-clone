@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { User } from "./../auth/user.model";
-import { AuthService } from "./../auth/auth.service";
+import { User } from "../../auth/user.model";
+import { AuthService } from "../../auth/auth.service";
 
 @Component({
   selector: "app-header",
@@ -10,14 +10,6 @@ import { AuthService } from "./../auth/auth.service";
 })
 export class HeaderComponent implements OnInit {
   user: User;
-  // = {
-  //   id: 1,
-  //   firstName: "Ahmed",
-  //   lastName: "Abbas",
-  //   email: "ahmeddabbas19@gmail.com",
-  //   avatar:
-  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQocR8G-b7HTmA8H4wQ32v7Y_mNUOE6Dkl89A&usqp=CAU",
-  // };
   searchForm: FormGroup;
   constructor(private authService: AuthService) {}
 

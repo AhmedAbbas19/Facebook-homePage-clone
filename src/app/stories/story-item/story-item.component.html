@@ -1,0 +1,12 @@
+<div class="story-item">
+  <app-spinner *ngIf="storyLoading; else storyTemp"></app-spinner>
+  <ng-template #storyTemp>
+    <mat-card class="image-card">
+      <img alt="bg" class="bg" [src]="story.image" />
+      <mat-card-content>
+        <img alt="avatar" class="avatar" [src]="story.avatar" />
+        <span class="card-name">Ahmed Abbas</span>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
+</div>

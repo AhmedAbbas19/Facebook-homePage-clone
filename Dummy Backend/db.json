@@ -67,33 +67,77 @@
       "category": "Travel"
     },
     {
-      "message": "dgdtjeryt",
+      "message": "I'm so proud of what I've just made ;)",
       "title": "Ahmed Abbas",
       "avatar": "https://picsum.photos/100/100",
       "date": "12/1/2020",
       "id": 5
+    },
+    {
+      "message": "dgdtjeryt",
+      "title": "Ahmed Abbas",
+      "avatar": "https://picsum.photos/100/100",
+      "date": "12/1/2020",
+      "id": 6
+    },
+    {
+      "message": "I'm so proud of what I've just made ;)",
+      "title": "Ahmed Abbas",
+      "avatar": "https://picsum.photos/100/100",
+      "date": "12/1/2020",
+      "id": 7
     }
   ],
   "stories": [
     {
+      "id": 1,
       "image": "https://picsum.photos/200/300",
       "avatar": "https://picsum.photos/100/101"
     },
     {
+      "id": 2,
       "image": "https://picsum.photos/300/400",
       "avatar": "https://picsum.photos/100/102"
     },
     {
+      "id": 3,
       "image": "https://picsum.photos/500/600",
       "avatar": "https://picsum.photos/100/103"
     },
     {
-      "image": "https://picsum.photos/600/800",
-      "avatar": "https://picsum.photos/100/104"
+      "image": "https://picsum.photos/600/888",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 4
     },
     {
-      "image": "https://picsum.photos/400/500",
-      "avatar": "https://picsum.photos/100/105"
+      "image": "https://picsum.photos/600/879",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 5
+    },
+    {
+      "image": "https://picsum.photos/600/877",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 6
+    },
+    {
+      "image": "https://picsum.photos/600/845",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 7
+    },
+    {
+      "image": "https://picsum.photos/600/855",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 8
+    },
+    {
+      "image": "https://picsum.photos/600/787",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 9
+    },
+    {
+      "image": "https://picsum.photos/600/741",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 10
     }
   ],
   "categories": [

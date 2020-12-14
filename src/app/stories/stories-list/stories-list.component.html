@@ -1,0 +1,16 @@
+<div class="stories-list">
+  <h2>Stories</h2>
+  <p>All stories</p>
+  <app-spinner *ngIf="loading; else storiesTemp"></app-spinner>
+  <ng-template #storiesTemp>
+    <div
+      class="user-avatar"
+      *ngFor="let story of stories"
+      [routerLink]="[story.id]"
+      routerLinkActive="active"
+    >
+      <img alt="" mat-card-avatar [src]="story.avatar" />
+      <span class="name">Ahmed Abbas</span>
+    </div>
+  </ng-template>
+</div>

@@ -1,11 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { User } from "./../../auth/user.model";
+import { User } from "../auth/user.model";
 import { Post } from "./post.model";
 import { Story } from "./story.model";
 import { HomeService } from "./home.service";
-import { AuthService } from "../../auth/auth.service";
-import { SpinnerService } from "./../../shared/spinner.service";
+import { AuthService } from "../auth/auth.service";
+import { SpinnerService } from "../shared/spinner.service";
+import { MatDialog } from "@angular/material";
+import { StoryDialogComponent } from "../shared/story-dialog/story-dialog.component";
 
 @Component({
   selector: "app-home",
@@ -14,18 +16,19 @@ import { SpinnerService } from "./../../shared/spinner.service";
 })
 export class HomeComponent implements OnInit {
   user: User;
-  posts: Post[];
-  stories: Story[];
+  posts: Post[] = [];
+  stories: Story[] = [];
   postForm: FormGroup;
-  
+
   authLoading = false;
-  storiesLoading = false
-  postsLoading = false
-  
+  storiesLoading = false;
+  postsLoading = false;
+
   constructor(
     private homeService: HomeService,
     private authService: AuthService,
-    private spinnerService: SpinnerService
+    private spinnerService: SpinnerService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -36,11 +39,17 @@ export class HomeComponent implements OnInit {
     this.authService.user.subscribe((user) => (this.user = user));
 
     this.spinnerService.loadingSub.subscribe((loading) => {
-      this.authLoading = loading.url.includes("users")? loading.loading: false
-      this.storiesLoading = loading.url.includes("stories")? loading.loading: false
-      this.postsLoading = loading.url.includes("posts")? loading.loading: false
+      this.authLoading = loading.url.includes("users")
+        ? loading.loading
+        : false;
+      this.storiesLoading = loading.url.includes("stories")
+        ? loading.loading
+        : false;
+      this.postsLoading = loading.url.includes("posts")
+        ? loading.loading
+        : false;
     });
-    
+
     this.homeService.getAllPosts().subscribe((posts) => (this.posts = posts));
     this.homeService
       .getAllStories()
@@ -61,5 +70,19 @@ export class HomeComponent implements OnInit {
     this.homeService
       .addPost(post)
       .subscribe((post: Post) => this.posts.unshift(post));
+  }
+  openDialog() {
+    let dialogRef = this.dialog.open(StoryDialogComponent, {
+      width: "500px",
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        let story: Story = { image: result, avatar: this.user.avatar };
+        this.homeService.addStory(story).subscribe((story: Story) => {
+          this.stories.unshift(story);
+        });
+      }
+    });
   }
 }

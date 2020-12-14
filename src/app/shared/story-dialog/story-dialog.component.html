@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Add to your story</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="story image url..."
+      #imgUrl
+      value="https://picsum.photos/600/800"
+    />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="imgUrl.value" cdkFocusInitial>
+    Ok
+  </button>
+</div>

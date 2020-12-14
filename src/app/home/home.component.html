@@ -1,7 +1,6 @@
 <app-spinner *ngIf="authLoading; else auth"></app-spinner>
 <ng-template #auth>
-<app-header></app-header>
-<div class="home__body">
+  <div class="home__body">
     <div class="home__body__sidebarLeft">
       <div class="inside">
         <div class="user-avatar">
@@ -14,59 +13,76 @@
           <mat-icon> local_hospital</mat-icon>
           <span class="covid">COVID-19 Information Center</span>
         </div>
-  
+
         <div>
           <mat-icon>flag</mat-icon>
           <span>Pages</span>
         </div>
-  
+
         <div>
           <mat-icon>people</mat-icon>
           <span>Friends</span>
         </div>
-  
+
         <div>
           <mat-icon> chat</mat-icon>
           <span>Messenger</span>
         </div>
-  
+
         <div>
           <mat-icon>store</mat-icon>
           <span>Marketplace</span>
         </div>
-  
+
         <div>
           <mat-icon>video_library</mat-icon>
           <span>Videos</span>
         </div>
-  
+
         <div>
           <mat-icon class="see-more">expand_more</mat-icon>
           <span>See More</span>
         </div>
       </div>
     </div>
-  
+
     <div class="home__body__contentMiddle">
-      
       <div class="home__body__contentMiddle__top">
         <app-spinner *ngIf="storiesLoading; else _stories"></app-spinner>
         <!--IMAGE CARDS-->
         <ng-template #_stories>
-          <mat-card *ngFor="let story of stories" class="image-card">
-            <img alt="bg" class="bg" [src]="story.image" />
+          <mat-card class="image-card" (click)="openDialog()">
+            <img alt="bg" class="bg" [src]="user.avatar" />
             <mat-card-content>
-              <img alt="avatar" class="avatar" [src]="story.avatar" />
-              <span class="card-name">Indranil Mukherjee</span>
+              <span class="card-name text-center">
+                <mat-icon>add_circle</mat-icon><br />
+                Create a story</span
+              >
             </mat-card-content>
           </mat-card>
+          <ng-container *ngFor="let story of stories; let i = index">
+            <mat-card
+              class="image-card"
+              *ngIf="i < 6"
+              [routerLink]="['/stories', story.id]"
+            >
+              <img alt="bg" class="bg" [src]="story.image" />
+              <mat-card-content>
+                <img alt="avatar" class="avatar" [src]="story.avatar" />
+                <span class="card-name"
+                  >{{ user.firstName }} {{ user.lastName }}</span
+                >
+              </mat-card-content>
+            </mat-card>
+          </ng-container>
         </ng-template>
-  
+        <div class="icon-back" *ngIf="stories.length > 6" routerLink="/stories">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </div>
       </div>
-  
+
       <div class="home__body__contentMiddle__center">
-        <app-spinner *ngIf="postsLoading;else _posts"></app-spinner>
-  
+        <app-spinner *ngIf="postsLoading; else _posts"></app-spinner>
         <ng-template #_posts>
           <mat-card class="post-message">
             <mat-card-header
@@ -90,44 +106,39 @@
                 <mat-icon color="accent">videocam</mat-icon>
                 <span>Live Video</span>
               </div>
-    
+
               <div>
                 <mat-icon color="primary">photo_album</mat-icon>
                 <span>Photo/Video</span>
               </div>
-    
+
               <div>
                 <mat-icon color="warn">mood</mat-icon>
                 <span>Feeling/Activity</span>
               </div>
             </mat-card-content>
           </mat-card>
-    
+
           <!--Loop Through All Posts From Database and Display-->
-            <mat-card *ngFor="let p of posts" class="posts">
-              <mat-card-header class="posts__header">
-                <img alt="{{ p?.title }}" mat-card-avatar [src]="p?.avatar" />
-                <div class="posts__header__right">
-                  <h3>{{ p?.title }}</h3>
-                </div>
-              </mat-card-header>
-              <mat-card-content class="posts__body">
-                <p>{{ p?.message }}</p>
-              </mat-card-content>
-            </mat-card>
+          <mat-card *ngFor="let p of posts" class="posts">
+            <mat-card-header class="posts__header">
+              <img alt="{{ p?.title }}" mat-card-avatar [src]="p?.avatar" />
+              <div class="posts__header__right">
+                <h3>{{ p?.title }}</h3>
+              </div>
+            </mat-card-header>
+            <mat-card-content class="posts__body">
+              <p>{{ p?.message }}</p>
+            </mat-card-content>
+          </mat-card>
         </ng-template>
-  
-  
       </div>
     </div>
-  
+
     <div class="home__body__feedRight">
       <div class="inside">
         <img alt="feed" src="assets/feed.jpg" />
       </div>
     </div>
-    
-    
   </div>
-  
 </ng-template>

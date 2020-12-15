@@ -33,7 +33,7 @@ export class StoryItemComponent implements OnInit {
     this.spinnerService.loadingSub.subscribe((loading) => {
       this.storyLoading = loading.url.includes("stories")
         ? loading.loading
-        : false;
+        : this.storyLoading;
     });
   }
 }

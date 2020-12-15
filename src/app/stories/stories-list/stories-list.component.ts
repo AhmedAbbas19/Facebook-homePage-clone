@@ -18,7 +18,9 @@ export class StoriesListComponent implements OnInit {
 
   ngOnInit() {
     this.spinnerService.loadingSub.subscribe((loading) => {
-      this.loading = loading.url.includes("stories") ? loading.loading : false;
+      this.loading = loading.url.includes("stories")
+        ? loading.loading
+        : this.loading;
     });
 
     this.homeService.getAllStories().subscribe((stories: Story[]) => {

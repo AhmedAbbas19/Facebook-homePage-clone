@@ -72,20 +72,6 @@
       "avatar": "https://picsum.photos/100/100",
       "date": "12/1/2020",
       "id": 5
-    },
-    {
-      "message": "dgdtjeryt",
-      "title": "Ahmed Abbas",
-      "avatar": "https://picsum.photos/100/100",
-      "date": "12/1/2020",
-      "id": 6
-    },
-    {
-      "message": "I'm so proud of what I've just made ;)",
-      "title": "Ahmed Abbas",
-      "avatar": "https://picsum.photos/100/100",
-      "date": "12/1/2020",
-      "id": 7
     }
   ],
   "stories": [
@@ -138,38 +124,11 @@
       "image": "https://picsum.photos/600/741",
       "avatar": "https://picsum.photos/100/100",
       "id": 10
-    }
-  ],
-  "categories": [
-    {
-      "id": "1",
-      "title": "Travel",
-      "image": "/imgs/3.jpg"
     },
     {
-      "id": "2",
-      "title": "Travel",
-      "image": "/imgs/1.jpg"
-    },
-    {
-      "id": "3",
-      "title": "Travel",
-      "image": "/imgs/2.jpg"
-    },
-    {
-      "id": "4",
-      "title": "Travel",
-      "image": "/imgs/4.jpg"
-    },
-    {
-      "id": "5",
-      "title": "Travel",
-      "image": "/imgs/5.jpg"
-    },
-    {
-      "id": "6",
-      "title": "Travel",
-      "image": "/imgs/6.jpg"
+      "image": "https://picsum.photos/600/749",
+      "avatar": "https://picsum.photos/100/100",
+      "id": 11
     }
   ]
 }

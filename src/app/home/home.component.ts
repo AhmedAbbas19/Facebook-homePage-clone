@@ -41,13 +41,13 @@ export class HomeComponent implements OnInit {
     this.spinnerService.loadingSub.subscribe((loading) => {
       this.authLoading = loading.url.includes("users")
         ? loading.loading
-        : false;
+        : this.authLoading;
       this.storiesLoading = loading.url.includes("stories")
         ? loading.loading
-        : false;
+        : this.storiesLoading;
       this.postsLoading = loading.url.includes("posts")
         ? loading.loading
-        : false;
+        : this.postsLoading;
     });
 
     this.homeService.getAllPosts().subscribe((posts) => (this.posts = posts));
